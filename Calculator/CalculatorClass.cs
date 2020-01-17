@@ -128,7 +128,7 @@ namespace Calculator
                             double secondNumber;
                             double firstNumber = tempStack.Pop();
 
-                            if (tempStack.Count == 0) //обработка чисел с минусом
+                            if (tempStack.Count == 0) 
                             {
                                 secondNumber = 0;
                             }

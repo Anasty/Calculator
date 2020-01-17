@@ -29,7 +29,7 @@ namespace Calculator
 
         string CheckOutput(string inputElement)
         {
-            if (equalPressed && ("+-/*".IndexOf(inputElement) == -1))//возможность продолжить вычисления после получения результата
+            if (equalPressed && ("+-/*".IndexOf(inputElement) == -1))
                 Output.Text = "";
 
             if(Output.Text.Length > 0) //нельзя ввести операторы подряд
@@ -39,7 +39,7 @@ namespace Calculator
                     Output.Text = Output.Text.Substring(0, Output.Text.Length - 1);                               
             }
 
-            if (Output.Text.Length > 1) //после открытой скобки можно ввести только число
+            if (Output.Text.Length > 1) 
             {
                 char lastElement = Output.Text[Output.Text.Length - 1];
                 if (("(".IndexOf(lastElement) != -1) && (("+/*()".IndexOf(inputElement) != -1)))
@@ -57,7 +57,7 @@ namespace Calculator
 
             inputElement = CheckOutput(inputElement);
 
-            Output.Text += inputElement; //добавление нажатой кнопки в строку вывода                      
+            Output.Text += inputElement;                      
             equalPressed = false;
         }
 
